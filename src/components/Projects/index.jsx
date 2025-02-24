@@ -21,7 +21,7 @@ export const Projects = ({ items }) => {
         {categories.map((category, index) => (
           <C.CategoryButton
             key={index}
-            active={selectedCategory === category}
+            $active={selectedCategory === category}
             onClick={() => setSelectedCategory(category)}
           >
             {category}

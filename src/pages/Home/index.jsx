@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import { AiOutlineInfoCircle } from 'react-icons/ai'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 import { Projects, Sidebar, Loading } from '../../components/'
 import items from '../../data/data'
 import * as C from './styles.js'
 
 export function Home() {
-  const history = useHistory()
+  const navigate = useNavigate()
+
   const [isLoading, setIsLoading] = useState(true)
 
   const handleInfoClick = () => {
     setTimeout(() => {
-      history.push('/info')
+      navigate('/info')
     }, 1000)
   }
 

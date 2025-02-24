@@ -110,14 +110,14 @@ export const CategoryButton = styled.button`
   padding: 8px 15px;
   border: none;
   border-radius: 20px;
-  background-color: ${(props) => (props.active ? '#007bff' : '#102537')};
+  background-color: ${(props) => (props.$active ? '#007bff' : '#102537')};
   color: ${(props) => (props.active ? '#fff' : '#fff')};
   font-size: 14px;
   cursor: pointer;
   transition: all 0.3s ease;
 
   &:hover {
-    background-color: ${(props) => (props.active ? '#0056b3' : '#ddd')};
+    background-color: ${(props) => (props.$active ? '#0056b3' : '#ddd')};
   }
 `
 // export const Container = styled.div`

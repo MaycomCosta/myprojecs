@@ -1,14 +1,14 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 import * as C from './styles.js'
 
 export function Info() {
-  const history = useHistory()
+  const navigate = useNavigate()
 
   function handleBackPageClick() {
     setTimeout(() => {
-      history.push('/')
+      navigate('/')
     }, 1000)
   }
 
