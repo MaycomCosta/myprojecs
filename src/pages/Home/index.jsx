@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { AiOutlineInfoCircle } from 'react-icons/ai'
 import { useHistory } from 'react-router-dom'
 
-import { Projects, Sidebar } from '../../components/'
+import { Projects, Sidebar, Loading } from '../../components/'
 import items from '../../data/data'
 import * as C from './styles.js'
 
@@ -21,6 +21,9 @@ export function Home() {
       setIsLoading(false)
     }, 2000)
   }, [])
+  if (isLoading) {
+    return <Loading />
+  }
 
   return (
     <>
@@ -34,7 +37,7 @@ export function Home() {
         </C.Title>
         <C.MainSection>
           <Sidebar />
-          {isLoading ? <h1>Carregando...</h1> : <Projects items={items} />}
+          <Projects items={items} />
         </C.MainSection>
       </C.Main>
     </>

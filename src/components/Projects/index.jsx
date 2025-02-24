@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
-import * as C from './styles';
+import React, { useState } from 'react'
+
+import * as C from './styles'
 
 export const Projects = ({ items }) => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('All')
 
   // Get unique categories including "All"
-  const categories = ['All', ...new Set(items.map((item) => item.cat))];
+  const categories = ['All', ...new Set(items.map((item) => item.cat))]
 
   // Filter items based on the selected category
-  const filteredItems = selectedCategory === 'All'
-    ? items
-    : items.filter((item) => item.cat === selectedCategory);
+  const filteredItems =
+    selectedCategory === 'All'
+      ? items
+      : items.filter((item) => item.cat === selectedCategory)
 
   return (
     <C.ContainerMain>
@@ -30,7 +32,7 @@ export const Projects = ({ items }) => {
       {/* Project Items */}
       <C.SectionCenter>
         {filteredItems.map((menuItem) => {
-          const { id, title, img, src, cat } = menuItem;
+          const { id, title, img, src, cat } = menuItem
           return (
             <C.DivLInk key={id} href={src} target="_blank">
               <C.MenuItem>
@@ -41,9 +43,9 @@ export const Projects = ({ items }) => {
                 </C.Header>
               </C.MenuItem>
             </C.DivLInk>
-          );
+          )
         })}
       </C.SectionCenter>
     </C.ContainerMain>
-  );
-};
+  )
+}

@@ -32,7 +32,7 @@ export const SectionCenter = styled.div`
 
   @media screen and (max-width: 800px) {
     width: 75vw;
-    grid-template-columns:2fr;
+    grid-template-columns: 2fr;
   }
 `
 export const MenuItem = styled.article`
@@ -40,9 +40,10 @@ export const MenuItem = styled.article`
   gap: 1rem 2rem;
   max-width: 25rem;
   background-color: white;
-  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06);
+  box-shadow:
+    0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.06);
   background-color: #08141f;
-
 
   @media screen and (min-width: 768px) {
     /* grid-template-columns: 225px 1fr; */
@@ -60,13 +61,13 @@ export const MenuItem = styled.article`
     display: block;
     border-radius: 5px;
 
-  @media screen and (min-width: 768px) {
-    height: 175px;
-  }
+    @media screen and (min-width: 768px) {
+      height: 175px;
+    }
 
-  @media screen and (min-width: 1200px) {
-    height: 220px;
-  }
+    @media screen and (min-width: 1200px) {
+      height: 220px;
+    }
   }
 `
 
@@ -74,8 +75,8 @@ export const DivLInk = styled.a`
   text-decoration: none;
   transition: transform 0.3s ease;
 
-  :hover {
-    transform: scale(1.05)
+  &:hover {
+    transform: scale(1.05);
   }
 `
 export const Header = styled.header`
@@ -84,26 +85,26 @@ export const Header = styled.header`
   justify-content: space-between;
   background-color: #08141f;
 
+  h4,
+  p {
+    color: white;
+    letter-spacing: 0.1rem;
+    text-transform: capitalize;
+    line-height: 1.25;
+    margin: 5px 0;
+  }
 
-  h4, p {
-      color: white;
-      letter-spacing: 0.1rem;
-      text-transform: capitalize;
-      line-height: 1.25;
-      margin: 5px 0; 
-    }
-
-    p {
-      margin: 0;
-      opacity: 0.8;
-    }
+  p {
+    margin: 0;
+    opacity: 0.8;
+  }
 `
 export const CategoryContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 20px;
-`;
+`
 
 export const CategoryButton = styled.button`
   padding: 8px 15px;
@@ -118,7 +119,7 @@ export const CategoryButton = styled.button`
   &:hover {
     background-color: ${(props) => (props.active ? '#0056b3' : '#ddd')};
   }
-`;
+`
 // export const Container = styled.div`
-  
+
 // `
